@@ -1,0 +1,45 @@
+/* Style the landing-page header and top-level heading. */
+header {
+    background-color: #14213d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #e31837;
+    font-family: Arial, sans-serif;
+}
+
+/* Keep the page tall enough to place the footer at the bottom. */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Center the container holding the Project 1 and Activity 2 links. */
+main div {
+    text-align: center;
+}
+
+main a {
+    display: inline-block;
+    margin: 10px;
+}
+
+/* Give the footer color and keep it at the bottom of the page. */
+footer {
+    background-color: #14213d;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

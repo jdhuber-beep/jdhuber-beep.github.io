@@ -1,0 +1,60 @@
+/* 1. Remove bullets and display the navigation list horizontally. */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+
+    /* 2. Give the list items a visible background and text color. */
+    background-color: #14213d;
+    color: white;
+
+    /* 3a. Enlarge the left and right margins by 30 pixels. */
+    /* margin-left: 30px;
+    margin-right: 30px; */
+
+    /* 3b. Enlarge the left and right margins by 30 ems. */
+    /* margin-left: 30em;
+    margin-right: 30em; */
+
+    /* 4a. Enlarge the left and right padding by 30 pixels. */
+    /* padding-left: 30px;
+    padding-right: 30px; */
+
+    /* 4b. Enlarge the left and right padding by 30 ems. */
+    padding-left: 30em;
+    padding-right: 30em;
+}
+
+/* 5. Move the paragraph in the footer to the right side. */
+footer p {
+    text-align: right;
+}
+
+/* Keep the full image visible on mobile, laptop, and tablet screens. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 6–7. Desktop-only image sizing and span placement. */
+@media screen and (min-width: 1200px) {
+    div {
+        position: relative;
+        width: 400px;
+    }
+
+    img {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* Place “Hotty Toddy!!” over the image’s lower-right corner. */
+    span {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}
