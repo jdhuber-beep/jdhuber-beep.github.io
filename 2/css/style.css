@@ -24,8 +24,12 @@ li {
     padding-right: 30px; */
 
     /* 4b. Enlarge the left and right padding by 30 ems. */
-    padding-left: 30em;
-    padding-right: 30em;
+    /* padding-left: 30em;
+    padding-right: 30em; */
+
+    /* 4c. Use a padding width of your choosing. */
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* 5. Move the paragraph in the footer to the right side. */
@@ -33,28 +37,20 @@ footer p {
     text-align: right;
 }
 
-/* Keep the full image visible on mobile, laptop, and tablet screens. */
+/* 6. Set the image height and width to 400 x 400. */
 img {
-    max-width: 100%;
-    height: auto;
+    width: 400px;
+    height: 400px;
 }
 
-/* 6–7. Desktop-only image sizing and span placement. */
-@media screen and (min-width: 1200px) {
-    div {
-        position: relative;
-        width: 400px;
-    }
+/* 7. Place “Hotty Toddy!!” over the image’s lower-right corner. */
+div {
+    position: relative;
+    display: inline-block;
+}
 
-    img {
-        width: 400px;
-        height: 400px;
-    }
-
-    /* Place “Hotty Toddy!!” over the image’s lower-right corner. */
-    span {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-    }
+span {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
