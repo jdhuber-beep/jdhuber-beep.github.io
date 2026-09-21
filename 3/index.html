@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Project 2 proposal for a Solar System Explorer web application.">
+  <title>Solar System Explorer Proposal</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Solar System Explorer</h1>
+    <p>Project 2 Topic Proposal — Jacob Huber</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Topic Description</h2>
+      <p>
+        I picked the solar system because I’ve always liked looking up weird planet facts, but
+        finding them in one spot is annoying. One site has diameter. Another has temperature.
+        A textbook might skip moons almost entirely. If you just want a straight answer about
+        Mars or Titan, you end up bouncing between tabs and trying to remember what you already
+        read.
+      </p>
+      <p>
+        That gap is the problem I want to work on. People searching this topic aren’t usually
+        looking for a research paper. They want basics: how big is it, how far away, how long
+        is the year, and what’s actually interesting about it. Astronomy is cool for that reason.
+        Earth is familiar, and then you realize other places in the same system are completely
+        different. Some are boiling hot. Some are frozen. Some aren’t even planets anymore, like
+        Pluto.
+      </p>
+      <p>
+        There are already good resources out there.
+        <a href="https://solarsystem.nasa.gov/">NASA’s Solar System Exploration</a>
+        site has a ton of material, and the
+        <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/">NASA Planetary Fact Sheet</a>
+        is packed with numbers.         They’re helpful if you already know what you’re looking for, but they’re easy to get
+        lost in. I want a smaller site that uses the same kind of facts, just laid out so you
+        pick a group, pick one object, and get the details without hunting around.
+      </p>
+
+      <figure>
+        <img src="img/solar-system.jpg" alt="Size comparison diagram of the eight planets in the solar system.">
+        <figcaption>
+          Planet size comparison diagram adapted from Wikimedia Commons (based on NASA planetary data).
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>App Description</h2>
+      <p>
+        The app is called Solar System Explorer. It’ll have four pages total. Home is the intro:
+        a short overview, a couple images, and links into the rest of the site. Planet Explorer is
+        the interactive page. You choose a category first, then choose something inside that
+        category, and then you see the info for that choice. Planet Comparison is a reading page
+        where I can put size, mass, temperature, and orbit side by side. Contact Us starts simple
+        and stays static for now. Later in the semester, when we get to databases, that page is
+        where user info can go.
+      </p>
+
+      <h3>Planned Pages</h3>
+      <ol>
+        <li><strong>Home</strong> — quick intro to the solar system, images, and links to the other pages</li>
+        <li><strong>Planet Explorer</strong> — two-step picker that ends on one object’s details</li>
+        <li><strong>Planet Comparison</strong> — static page for comparing planet stats</li>
+        <li><strong>Contact Us</strong> — static contact page for now, form storage later</li>
+      </ol>
+
+      <h3>Two-Step Explorer Flow</h3>
+      <p>
+        The explorer needs two steps in order. Step 1 is one of four main groups. Step 2 depends
+        on whatever got picked in Step 1, and each group has four options. Whatever path someone
+        takes, the final screen should show the same kinds of facts. That way when JavaScript
+        gets added later, I’m not writing sixteen different layouts. I’m thinking diameter,
+        distance, orbital period, average temperature, and a short blurb.
+      </p>
+
+      <h4>Choice 1: Inner Planets</h4>
+      <ul>
+        <li>Mercury</li>
+        <li>Venus</li>
+        <li>Earth</li>
+        <li>Mars</li>
+      </ul>
+
+      <h4>Choice 2: Outer Planets</h4>
+      <ul>
+        <li>Jupiter</li>
+        <li>Saturn</li>
+        <li>Uranus</li>
+        <li>Neptune</li>
+      </ul>
+
+      <h4>Choice 3: Dwarf Planets</h4>
+      <ul>
+        <li>Pluto</li>
+        <li>Ceres</li>
+        <li>Eris</li>
+        <li>Makemake</li>
+      </ul>
+
+      <h4>Choice 4: Notable Moons</h4>
+      <ul>
+        <li>Earth’s Moon</li>
+        <li>Europa</li>
+        <li>Titan</li>
+        <li>Ganymede</li>
+      </ul>
+
+      <p>
+        So a normal run might look like Inner Planets → Mars → Mars info. Or Notable Moons →
+        Titan → Titan info. I originally thought about splitting things into just terrestrial
+        vs gas/ice giants, but the project asks for four starting choices with four options under
+        each. Grouping them this way still makes sense and gives me sixteen endings that all
+        show the same style of data.
+      </p>
+
+      <figure>
+        <img src="img/earth.jpg" alt="Full-disk view of Earth from space showing oceans, clouds, and continents.">
+        <figcaption>
+          Earth from space. Image credit: NASA / NOAA (public domain), image ID PIA18033.
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img src="img/mars.jpg" alt="Full-disk view of Mars showing its reddish surface and polar region.">
+        <figcaption>
+          Mars from space. Image credit: NASA / JPL (public domain), image ID PIA00407.
+        </figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="../index.html">Back to course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054 Project 2</p>
+  </footer>
+</body>
+</html>
