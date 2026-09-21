@@ -90,6 +90,10 @@ footer a {
     color: #f0c75e;
 }
 
+footer a:hover {
+    color: #ffffff;
+}
+
 /* Responsive adjustments covered in class */
 @media screen and (min-width: 768px) {
     header h1 {
