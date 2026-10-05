@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Start page for a two-step solar system explorer.">
+  <title>Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 3</p>
+    <h1>Solar System Explorer</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="inner-planets.html">Inner Planets</a></li>
+        <li><a href="outer-planets.html">Outer Planets</a></li>
+        <li><a href="dwarf-planets.html">Dwarf Planets</a></li>
+        <li><a href="notable-moons.html">Notable Moons</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>How this works</h2>
+      <p>Step 1 is the group. Step 2 is one object in that group. The last page has the numbers.</p>
+    </aside>
+    <main class="content" id="main">
+      <nav aria-label="Breadcrumb">
+        <ol class="crumbs">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+        </ol>
+      </nav>
+      <p class="lead">Pick a group first. Each group page has four choices, and each of those opens its own data page.</p>
+      <figure>
+        <img class="banner-small" src="img/solar-small.jpg" alt="Diagram comparing the sizes of the eight planets.">
+        <img class="banner-large" src="img/solar-large.jpg" alt="Diagram comparing the sizes of the eight planets.">
+        <figcaption>Planet size comparison. The larger image is used on wide screens. Image adapted from Wikimedia Commons, based on NASA data.</figcaption>
+      </figure>
+      <h2>Step 1: choose a group</h2>
+      <ul class="card-list">
+        <li class="card">
+          <h3><a href="inner-planets.html">Inner Planets</a></h3>
+          <p>These are the four rocky planets inside the asteroid belt.</p>
+        </li><li class="card">
+          <h3><a href="outer-planets.html">Outer Planets</a></h3>
+          <p>These four sit past the asteroid belt.</p>
+        </li><li class="card">
+          <h3><a href="dwarf-planets.html">Dwarf Planets</a></h3>
+          <p>Dwarf planets orbit the Sun and are round enough to be planet-like, but they have not cleared their orbits.</p>
+        </li><li class="card">
+          <h3><a href="notable-moons.html">Notable Moons</a></h3>
+          <p>These are moons, not planets.</p>
+        </li>
+      </ul>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+</body>
+</html>

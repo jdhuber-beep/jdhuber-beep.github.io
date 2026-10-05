@@ -1,0 +1,302 @@
+/* Mobile-first styles for the solar system explorer. */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #e7eef5;
+    color: #1c2430;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background-color: #ffffff;
+    color: #0b1c33;
+    padding: 8px 12px;
+    z-index: 2;
+}
+
+.skip-link:focus {
+    left: 8px;
+    top: 8px;
+}
+
+.site-header {
+    background-color: #0b1c33;
+    color: #f4f7fb;
+    padding: 20px 16px 12px;
+}
+
+.kicker {
+    margin: 0 0 6px;
+    color: #f0c75e;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.site-header h1 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-list li {
+    border-top: 1px solid #24405f;
+}
+
+.nav-list a {
+    display: block;
+    padding: 10px 4px;
+    color: #f4f7fb;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+    color: #f0c75e;
+}
+
+.layout {
+    padding: 16px;
+}
+
+.side-note {
+    background-color: #123252;
+    color: #f4f7fb;
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.side-note h2 {
+    margin-top: 0;
+    color: #f0c75e;
+    font-size: 1.1rem;
+}
+
+.side-note p {
+    margin-bottom: 0;
+}
+
+.side-note a {
+    color: #f0c75e;
+}
+
+.side-note a:hover,
+.side-note a:focus {
+    color: #ffffff;
+}
+
+.content {
+    background-color: #ffffff;
+    border: 1px solid #d3deea;
+    padding: 16px;
+}
+
+.crumbs {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+}
+
+.crumbs li {
+    display: inline;
+}
+
+.crumbs li + li::before {
+    content: " / ";
+    color: #5c6b7a;
+}
+
+.lead {
+    font-size: 1.05rem;
+}
+
+.banner-small,
+.banner-large {
+    width: 100%;
+    height: auto;
+    border: 1px solid #c5d2e0;
+    margin: 12px 0 4px;
+}
+
+.banner-large {
+    display: none;
+}
+
+figcaption {
+    margin: 0 0 16px;
+    color: #4a5563;
+    font-size: 0.9rem;
+}
+
+.card-list,
+.fact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #f7f4ee;
+    border-left: 6px solid #1f4e79;
+    margin-bottom: 12px;
+    padding: 14px;
+}
+
+.card h3 {
+    margin: 0 0 8px;
+    font-size: 1.25rem;
+}
+
+.card p {
+    margin: 0;
+}
+
+.fact-list li {
+    background-color: #f7f4ee;
+    border-top: 4px solid #1f4e79;
+    margin-bottom: 10px;
+    padding: 12px;
+}
+
+.fact-list strong {
+    display: block;
+    color: #0b1c33;
+    font-family: Arial, sans-serif;
+    margin-bottom: 4px;
+}
+
+h2 {
+    color: #0b1c33;
+}
+
+a {
+    color: #0f4c81;
+}
+
+a:hover {
+    color: #0b1c33;
+}
+
+a:focus {
+    outline: 3px solid #c8960c;
+    outline-offset: 2px;
+}
+
+.site-footer {
+    background-color: #0b1c33;
+    color: #d7e0ec;
+    padding: 16px;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #f0c75e;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    color: #ffffff;
+}
+
+.site-footer p {
+    margin: 6px 0;
+}
+
+/* Tablet: two-column cards, still stacked page sections. */
+@media screen and (min-width: 768px) {
+    .site-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .nav-list li {
+        border-top: 0;
+        margin-right: 8px;
+    }
+
+    .nav-list a {
+        padding: 8px 10px;
+    }
+
+    .card-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .card {
+        flex: 0 0 48%;
+    }
+
+    .content {
+        padding: 24px;
+    }
+}
+
+/* Desktop: sidebar plus main column, and a wider fact layout. */
+@media screen and (min-width: 1100px) {
+    .banner-small {
+        display: none;
+    }
+
+    .banner-large {
+        display: block;
+        max-width: 720px;
+    }
+
+    .layout {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px 16px 40px;
+    }
+
+    .side-note {
+        flex: 0 0 250px;
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .content {
+        flex: 1 1 auto;
+    }
+
+    .fact-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .fact-list li {
+        flex: 0 0 48%;
+    }
+}
