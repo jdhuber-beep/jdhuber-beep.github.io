@@ -1,4 +1,4 @@
-/* Mobile-first styles for the solar system explorer. */
+/* Mobile styles come first. Wider screens are changed in the media queries below. */
 
 * {
     box-sizing: border-box;
@@ -6,18 +6,19 @@
 
 body {
     margin: 0;
-    background-color: #e7eef5;
-    color: #1c2430;
+    background-color: #07101c;
+    color: #e8eef6;
     font-family: Georgia, "Times New Roman", serif;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
+/* Hidden until a keyboard user tabs to it. */
 .skip-link {
     position: absolute;
     left: -999px;
     top: 0;
     background-color: #ffffff;
-    color: #0b1c33;
+    color: #07101c;
     padding: 8px 12px;
     z-index: 2;
 }
@@ -27,28 +28,31 @@ body {
     top: 8px;
 }
 
+/* Dark header with a gold line under the title. */
 .site-header {
-    background-color: #0b1c33;
-    color: #f4f7fb;
-    padding: 20px 16px 12px;
+    background-color: #0c1b33;
+    color: #f7f4ee;
+    padding: 22px 16px 8px;
+    border-bottom: 4px solid #e0b15a;
 }
 
 .kicker {
-    margin: 0 0 6px;
-    color: #f0c75e;
+    margin: 0 0 8px;
+    color: #e0b15a;
     font-family: Arial, sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.04em;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
 .site-header h1 {
-    margin: 0 0 12px;
+    margin: 0 0 16px;
     color: #ffffff;
-    font-size: 1.8rem;
-    line-height: 1.2;
+    font-size: 2rem;
+    line-height: 1.15;
 }
 
+/* Nav links stack on a phone. */
 .nav-list {
     list-style: none;
     margin: 0;
@@ -58,37 +62,50 @@ body {
 }
 
 .nav-list li {
-    border-top: 1px solid #24405f;
+    margin-bottom: 8px;
 }
 
 .nav-list a {
     display: block;
-    padding: 10px 4px;
-    color: #f4f7fb;
+    padding: 10px 12px;
+    background-color: #163154;
+    color: #f7f4ee;
+    border: 1px solid #2c4d73;
+    border-radius: 6px;
     font-family: Arial, sans-serif;
     text-decoration: none;
 }
 
 .nav-list a:hover,
 .nav-list a:focus {
-    color: #f0c75e;
+    background-color: #1f4e79;
+    color: #ffffff;
+}
+
+/* The page you are on gets a gold border. */
+.nav-list a[aria-current="page"] {
+    border-color: #e0b15a;
+    color: #e0b15a;
 }
 
 .layout {
     padding: 16px;
 }
 
+/* Short note that sits above the main text on a phone. */
 .side-note {
-    background-color: #123252;
-    color: #f4f7fb;
+    background-color: #12243f;
+    color: #f7f4ee;
     margin-bottom: 16px;
     padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #2c4d73;
 }
 
 .side-note h2 {
     margin-top: 0;
-    color: #f0c75e;
-    font-size: 1.1rem;
+    color: #e0b15a;
+    font-size: 1.15rem;
 }
 
 .side-note p {
@@ -96,7 +113,7 @@ body {
 }
 
 .side-note a {
-    color: #f0c75e;
+    color: #e0b15a;
 }
 
 .side-note a:hover,
@@ -104,10 +121,13 @@ body {
     color: #ffffff;
 }
 
+/* The white reading area, so body text stays easy to read. */
 .content {
-    background-color: #ffffff;
-    border: 1px solid #d3deea;
-    padding: 16px;
+    background-color: #f7f4ee;
+    color: #1c2430;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
 .crumbs {
@@ -128,15 +148,15 @@ body {
 }
 
 .lead {
-    font-size: 1.05rem;
+    font-size: 1.08rem;
 }
 
 .banner-small,
 .banner-large {
     width: 100%;
     height: auto;
-    border: 1px solid #c5d2e0;
-    margin: 12px 0 4px;
+    border-radius: 8px;
+    margin: 8px 0 4px;
 }
 
 .banner-large {
@@ -149,6 +169,12 @@ figcaption {
     font-size: 0.9rem;
 }
 
+h2 {
+    color: #0c1b33;
+    margin-bottom: 12px;
+}
+
+/* Choice cards and fact boxes both start as one column. */
 .card-list,
 .fact-list {
     list-style: none;
@@ -159,37 +185,41 @@ figcaption {
 }
 
 .card {
-    background-color: #f7f4ee;
+    background-color: #ffffff;
+    border: 1px solid #d7dee6;
     border-left: 6px solid #1f4e79;
+    border-radius: 8px;
     margin-bottom: 12px;
-    padding: 14px;
+    padding: 16px;
 }
 
 .card h3 {
     margin: 0 0 8px;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
 }
 
 .card p {
     margin: 0;
+    color: #243140;
 }
 
 .fact-list li {
-    background-color: #f7f4ee;
-    border-top: 4px solid #1f4e79;
+    background-color: #ffffff;
+    border: 1px solid #d7dee6;
+    border-top: 4px solid #e0b15a;
+    border-radius: 8px;
     margin-bottom: 10px;
-    padding: 12px;
+    padding: 14px;
 }
 
 .fact-list strong {
     display: block;
-    color: #0b1c33;
+    color: #0c1b33;
     font-family: Arial, sans-serif;
-    margin-bottom: 4px;
-}
-
-h2 {
-    color: #0b1c33;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
 }
 
 a {
@@ -197,23 +227,26 @@ a {
 }
 
 a:hover {
-    color: #0b1c33;
+    color: #07101c;
 }
 
 a:focus {
     outline: 3px solid #c8960c;
-    outline-offset: 2px;
+    outline-offset: 3px;
 }
 
 .site-footer {
-    background-color: #0b1c33;
+    background-color: #0c1b33;
     color: #d7e0ec;
-    padding: 16px;
+    border-top: 4px solid #e0b15a;
+    padding: 18px 16px;
     text-align: center;
 }
 
 .site-footer a {
-    color: #f0c75e;
+    color: #e0b15a;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
 }
 
 .site-footer a:hover,
@@ -222,13 +255,17 @@ a:focus {
 }
 
 .site-footer p {
-    margin: 6px 0;
+    margin: 8px 0;
 }
 
-/* Tablet: two-column cards, still stacked page sections. */
+/* Tablet: nav and cards sit side by side. */
 @media screen and (min-width: 768px) {
+    .site-header {
+        padding: 28px 28px 12px;
+    }
+
     .site-header h1 {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
     .nav-list {
@@ -237,12 +274,8 @@ a:focus {
     }
 
     .nav-list li {
-        border-top: 0;
         margin-right: 8px;
-    }
-
-    .nav-list a {
-        padding: 8px 10px;
+        margin-bottom: 8px;
     }
 
     .card-list {
@@ -256,11 +289,11 @@ a:focus {
     }
 
     .content {
-        padding: 24px;
+        padding: 28px;
     }
 }
 
-/* Desktop: sidebar plus main column, and a wider fact layout. */
+/* Desktop: a fixed sidebar next to the main column. */
 @media screen and (min-width: 1100px) {
     .banner-small {
         display: none;
@@ -268,21 +301,21 @@ a:focus {
 
     .banner-large {
         display: block;
-        max-width: 720px;
+        max-width: 760px;
     }
 
     .layout {
         display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        max-width: 1100px;
+        align-items: stretch;
+        max-width: 1120px;
         margin: 0 auto;
-        padding: 24px 16px 40px;
+        padding: 28px 20px 48px;
     }
 
     .side-note {
-        flex: 0 0 250px;
-        margin-right: 20px;
+        flex: 0 0 260px;
+        margin-right: 22px;
         margin-bottom: 0;
     }
 
