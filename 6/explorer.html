@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Pick a group, then a planet or moon, to see its data.">
+  <title>Explorer - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 4</p>
+    <h1>Explorer</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html" aria-current="page">Explorer</a></li>
+        <li><a href="facts.html">Solar System Facts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><button type="button" class="login-button">Log In / Sign Up</button></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>How this works</h2>
+      <p>Step 1 is the group. Step 2 is one object in that group. After that you see its numbers. Use the trail at the top or the back button to go back.</p>
+    </aside>
+    <main class="content" id="main">
+      <nav aria-label="Breadcrumb">
+        <ol class="crumbs" id="breadcrumbs">
+          <li><span aria-current="step">All groups</span></li>
+        </ol>
+      </nav>
+      <p class="status" id="statusMessage" role="status">Loading solar system data...</p>
+      <div id="explorerView"></div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+  <script src="js/explorer.js"></script>
+</body>
+</html>
