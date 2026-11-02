@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Facts about the solar system as a whole: the Sun, its regions, and units of distance.">
+  <title>Solar System Facts - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="facts">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="busyIndicator" class="busy" role="status" aria-live="polite" hidden>
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="busy-text">Working...</span>
+  </div>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 5</p>
+    <h1>Solar System Facts</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="facts.html" aria-current="page">Solar System Facts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="accountNav"><a class="login-button" href="login.html">Log In / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>The big picture</h2>
+      <p>These facts are about the whole solar system. For one planet or moon, use the Explorer.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="status" id="authChecking" role="status">Checking whether you are signed in...</p>
+      <section id="signInGate" hidden>
+        <h2 tabindex="-1">Sign in to read the facts page</h2>
+        <p class="lead">This page is for signed-in users. Creating an account only needs an email and a password.</p>
+        <a class="button-link" href="login.html?next=facts.html">Log in or sign up</a>
+      </section>
+      <div id="pageContent" hidden>
+      <p class="lead">The Explorer covers single planets and moons. This page covers the solar system as a whole: what sits at the center, where the belts are, and the units used to describe distances in space.</p>
+      <h2>The Sun</h2>
+      <ul class="fact-list">
+        <li><strong>Diameter</strong> About 1.39 million km</li><li><strong>Share of the solar system&#x27;s mass</strong> About 99.8%</li><li><strong>Surface temperature</strong> About 5,500°C</li><li><strong>Age</strong> About 4.6 billion years</li>
+      </ul>
+      <h2>Regions of the solar system</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Main regions, listed from the Sun outward</caption>
+          <thead>
+            <tr>
+              <th scope="col">Region</th>
+              <th scope="col">Where it is</th>
+              <th scope="col">What is there</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Inner solar system</th>
+              <td>From the Sun out to Mars</td>
+              <td>The four rocky planets</td>
+            </tr>
+            <tr>
+              <th scope="row">Asteroid belt</th>
+              <td>Between Mars and Jupiter</td>
+              <td>Millions of rocky asteroids and the dwarf planet Ceres</td>
+            </tr>
+            <tr>
+              <th scope="row">Outer solar system</th>
+              <td>From Jupiter out to Neptune</td>
+              <td>The gas giants and ice giants</td>
+            </tr>
+            <tr>
+              <th scope="row">Kuiper Belt</th>
+              <td>Past Neptune, about 30 to 50 AU from the Sun</td>
+              <td>Icy bodies, including Pluto and Makemake</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Measuring distance in space</h2>
+      <ul class="fact-list">
+        <li><strong>Astronomical unit (AU)</strong> The average distance from Earth to the Sun, about 149.6 million km</li><li><strong>Speed of light</strong> About 300,000 km per second</li><li><strong>Sunlight to Earth</strong> About 8 minutes and 20 seconds</li><li><strong>Light-year</strong> The distance light travels in one year, about 9.46 trillion km</li>
+      </ul>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+  <script type="module" src="js/facts.js"></script>
+</body>
+</html>

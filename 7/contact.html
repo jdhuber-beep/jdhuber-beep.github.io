@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Send a question or correction about the Solar System Explorer site.">
+  <title>Contact - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="contact">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="busyIndicator" class="busy" role="status" aria-live="polite" hidden>
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="busy-text">Working...</span>
+  </div>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 5</p>
+    <h1>Contact</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="facts.html">Solar System Facts</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li id="accountNav"><a class="login-button" href="login.html">Log In / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>What happens to your message</h2>
+      <p>It is saved to the site's database under your account, and you get a confirmation with a reference number as soon as the save finishes. Messages you have sent before are listed under the form.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="status" id="authChecking" role="status">Checking whether you are signed in...</p>
+      <section id="signInGate" hidden>
+        <h2 tabindex="-1">Sign in to send a message</h2>
+        <p class="lead">The Contact form is for signed-in users, so each message is tied to an account. Creating one only needs an email and a password.</p>
+        <a class="button-link" href="login.html?next=contact.html">Log in or sign up</a>
+      </section>
+      <div id="pageContent" hidden>
+        <p class="lead">Have a question about the site, or spotted a number that looks wrong? Fill in the form and press Send. All three fields are required.</p>
+        <section class="form-card" aria-labelledby="contactHeading">
+          <h2 id="contactHeading">Send a message</h2>
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="contactName">Your name</label>
+              <input id="contactName" name="name" type="text" autocomplete="name" required maxlength="80">
+            </div>
+            <div class="field">
+              <label for="contactEmail">Reply-to email</label>
+              <input id="contactEmail" name="email" type="email" autocomplete="email" required aria-describedby="contactEmailHelp">
+              <p class="field-help" id="contactEmailHelp">Filled in from your account. Change it if you want a reply somewhere else.</p>
+            </div>
+            <div class="field">
+              <label for="contactTopic">Topic</label>
+              <select id="contactTopic" name="topic" required>
+                <option value="">Choose a topic</option>
+                <option value="Question">Question</option>
+                <option value="Correction">Correction to a number</option>
+                <option value="Other">Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="6" required maxlength="2000" aria-describedby="contactMessageHelp"></textarea>
+              <p class="field-help" id="contactMessageHelp">Up to 2,000 characters.</p>
+            </div>
+            <p class="status" id="contactMessageStatus" role="alert" hidden></p>
+            <button type="submit" class="primary-button">Send message</button>
+          </form>
+        </section>
+        <section aria-labelledby="sentHeading">
+          <h2 id="sentHeading">Messages you have sent</h2>
+          <p class="status" id="sentStatus" role="status">Loading your messages...</p>
+          <ul class="fact-list" id="sentList"></ul>
+        </section>
+        <h2>Other ways to reach me</h2>
+        <ul class="fact-list">
+          <li><strong>Name</strong> Jacob Huber</li><li><strong>Email</strong> <a href="mailto:jdhuber@go.olemiss.edu">jdhuber@go.olemiss.edu</a></li><li><strong>Course</strong> CSCI 3054</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+  <script type="module" src="js/contact.js"></script>
+</body>
+</html>

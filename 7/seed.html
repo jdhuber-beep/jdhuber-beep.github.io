@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Site owner tool: loads the solar system data into the database.">
+  <meta name="robots" content="noindex">
+  <title>Load Data - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="seed">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="busyIndicator" class="busy" role="status" aria-live="polite" hidden>
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="busy-text">Working...</span>
+  </div>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 5</p>
+    <h1>Load Data</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="facts.html">Solar System Facts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="accountNav"><a class="login-button" href="login.html">Log In / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>Owner only</h2>
+      <p>This page copies the solar system data from the site's JSON file into the Firestore database. Only the site owner's account is allowed to write it. Everyone else can read it through the Explorer.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="status" id="authChecking" role="status">Checking whether you are signed in...</p>
+      <section id="signInGate" hidden>
+        <h2 tabindex="-1">Sign in as the site owner</h2>
+        <p class="lead">This tool only works for the owner's account.</p>
+        <a class="button-link" href="login.html?next=seed.html">Log in</a>
+      </section>
+      <div id="pageContent" hidden>
+        <p class="lead">Press the button to load the groups and objects into the database. Running it again simply overwrites the same records, so it is safe to repeat.</p>
+        <p class="status" id="seedStatus" role="status" hidden></p>
+        <p>
+          <button type="button" class="primary-button" id="checkButton">Check what is in the database</button>
+          <button type="button" class="primary-button" id="seedButton">Load solar system data</button>
+        </p>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+  <script type="module" src="js/seed.js"></script>
+</body>
+</html>

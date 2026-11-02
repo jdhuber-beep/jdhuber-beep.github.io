@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Pick a group, then a planet or moon, to see its data.">
+  <title>Explorer - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="explorer">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="busyIndicator" class="busy" role="status" aria-live="polite" hidden>
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="busy-text">Working...</span>
+  </div>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 5</p>
+    <h1>Explorer</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html" aria-current="page">Explorer</a></li>
+        <li><a href="facts.html">Solar System Facts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="accountNav"><a class="login-button" href="login.html">Log In / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>How this works</h2>
+      <p>Step 1 is the group. Step 2 is one object in that group. After that you see its numbers. Use the trail at the top or the back button to go back. The data is loaded live from the database.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="status" id="authChecking" role="status">Checking whether you are signed in...</p>
+      <section id="signInGate" hidden>
+        <h2 tabindex="-1">Sign in to use the Explorer</h2>
+        <p class="lead">The Explorer is for signed-in users. Signing in takes a moment, and creating an account only needs an email and a password.</p>
+        <a class="button-link" href="login.html?next=explorer.html">Log in or sign up</a>
+      </section>
+      <div id="pageContent" hidden>
+        <nav aria-label="Breadcrumb">
+          <ol class="crumbs" id="breadcrumbs">
+            <li><span aria-current="step">All groups</span></li>
+          </ol>
+        </nav>
+        <p class="status" id="statusMessage" role="status" hidden></p>
+        <div id="explorerView"></div>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+  <script type="module" src="js/explorer.js"></script>
+</body>
+</html>

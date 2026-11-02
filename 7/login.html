@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jacob Huber">
+  <meta name="description" content="Sign in, create an account, change your password, or log out.">
+  <title>Account - Solar System Explorer</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="login">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="busyIndicator" class="busy" role="status" aria-live="polite" hidden>
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="busy-text">Working...</span>
+  </div>
+  <header class="site-header">
+    <p class="kicker">CSCI 3054 Project 5</p>
+    <h1>Your Account</h1>
+    <nav aria-label="Main">
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="facts.html">Solar System Facts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="accountNav"><a class="login-button" href="login.html" aria-current="page">Log In / Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="layout">
+    <aside class="side-note">
+      <h2>About accounts</h2>
+      <p>An account needs an email address and a password of at least 6 characters. Signing in unlocks the Explorer, the Facts page, and the Contact form. Nothing else is collected.</p>
+    </aside>
+    <main class="content" id="main">
+      <p class="status" id="authChecking" role="status">Checking whether you are signed in...</p>
+      <p class="status" id="pageMessage" role="status" hidden></p>
+
+      <!-- Shown to visitors who are not signed in. -->
+      <div id="visitorPanel" hidden>
+        <p class="lead">Sign in if you already have an account, or create one in under a minute. Both forms are on this page.</p>
+        <div class="form-grid">
+          <section class="form-card" aria-labelledby="signInHeading">
+            <h2 id="signInHeading" tabindex="-1">Sign in</h2>
+            <form id="signInForm" novalidate>
+              <div class="field">
+                <label for="signInEmail">Email</label>
+                <input id="signInEmail" name="email" type="email" autocomplete="email" required aria-describedby="signInEmailHelp">
+                <p class="field-help" id="signInEmailHelp">The email you signed up with.</p>
+              </div>
+              <div class="field">
+                <label for="signInPassword">Password</label>
+                <input id="signInPassword" name="password" type="password" autocomplete="current-password" required>
+              </div>
+              <p class="status" id="signInMessage" role="alert" hidden></p>
+              <button type="submit" class="primary-button">Sign in</button>
+            </form>
+          </section>
+          <section class="form-card" aria-labelledby="signUpHeading">
+            <h2 id="signUpHeading" tabindex="-1">Create an account</h2>
+            <form id="signUpForm" novalidate>
+              <div class="field">
+                <label for="signUpEmail">Email</label>
+                <input id="signUpEmail" name="email" type="email" autocomplete="email" required>
+              </div>
+              <div class="field">
+                <label for="signUpPassword">Password</label>
+                <input id="signUpPassword" name="password" type="password" autocomplete="new-password" minlength="6" required aria-describedby="signUpPasswordHelp">
+                <p class="field-help" id="signUpPasswordHelp">At least 6 characters.</p>
+              </div>
+              <div class="field">
+                <label for="signUpConfirm">Confirm password</label>
+                <input id="signUpConfirm" name="confirm" type="password" autocomplete="new-password" minlength="6" required>
+              </div>
+              <p class="status" id="signUpMessage" role="alert" hidden></p>
+              <button type="submit" class="primary-button">Create account</button>
+            </form>
+          </section>
+        </div>
+      </div>
+
+      <!-- Shown once the user is signed in. -->
+      <div id="memberPanel" hidden>
+        <p class="lead">You are signed in as <strong id="memberEmail"></strong>. From here you can change your password or log out. The rest of the site is open to you.</p>
+        <ul class="card-list">
+          <li class="card">
+            <h3><a href="explorer.html">Go to the Explorer</a></h3>
+            <p>Pick a group, then one object, and see its data.</p>
+          </li><li class="card">
+            <h3><a href="contact.html">Send a message</a></h3>
+            <p>Questions and corrections go through the Contact page.</p>
+          </li>
+        </ul>
+        <section class="form-card" aria-labelledby="changePasswordHeading">
+          <h2 id="changePasswordHeading" tabindex="-1">Change password</h2>
+          <form id="changePasswordForm" novalidate>
+            <div class="field">
+              <label for="currentPassword">Current password</label>
+              <input id="currentPassword" name="currentPassword" type="password" autocomplete="current-password" required>
+            </div>
+            <div class="field">
+              <label for="newPassword">New password</label>
+              <input id="newPassword" name="newPassword" type="password" autocomplete="new-password" minlength="6" required aria-describedby="newPasswordHelp">
+              <p class="field-help" id="newPasswordHelp">At least 6 characters, and different from the current one.</p>
+            </div>
+            <div class="field">
+              <label for="newPasswordConfirm">Confirm new password</label>
+              <input id="newPasswordConfirm" name="newPasswordConfirm" type="password" autocomplete="new-password" minlength="6" required>
+            </div>
+            <p class="status" id="changePasswordMessage" role="alert" hidden></p>
+            <button type="submit" class="primary-button">Change password</button>
+          </form>
+        </section>
+        <section aria-labelledby="logOutHeading">
+          <h2 id="logOutHeading">Log out</h2>
+          <p>Logging out closes the Explorer, Facts, and Contact pages until you sign in again.</p>
+          <button type="button" class="back-button" id="logOutButton">Log out</button>
+        </section>
+      </div>
+    </main>
+  </div>
+  <footer class="site-footer">
+    <p><a href="index.html">Back to explorer home</a></p>
+    <p><a href="../index.html">Course landing page</a></p>
+    <p>Jacob Huber — CSCI 3054</p>
+  </footer>
+  <script type="module" src="js/login.js"></script>
+</body>
+</html>
